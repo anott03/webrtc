@@ -10,15 +10,27 @@ let sendChannel;
 /** @type {FileReader} */
 let fileReader;
 
+/** @type {RTCDataChannel} */
 let receiveChannel;
 
 let receiveBuffer = [];
+
+/** @type {number} */
 let receivedSize = 0;
 
+/** @type {number} */
 let bytesPrev = 0;
+
+/** @type {number} */
 let timestampPrev = 0;
+
+/** @type {number} */
 let timestampStart;
+
+/** @type {number} */
 let statsInterval = null;
+
+/** @type {number} */
 let bitrateMax = 0;
 
 export async function createConnection() {
